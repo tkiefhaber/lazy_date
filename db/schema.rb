@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120620205345) do
+ActiveRecord::Schema.define(:version => 20120621195736) do
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "delivery_restaurants", :force => true do |t|
     t.string   "name"
@@ -21,6 +27,31 @@ ActiveRecord::Schema.define(:version => 20120620205345) do
     t.string   "category"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "movie_categories", :force => true do |t|
+    t.integer  "movie_id"
+    t.integer  "category_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "movies", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.text     "link"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "restaurants", :force => true do |t|
+    t.boolean  "delivers",    :default => false
+    t.boolean  "takeout",     :default => true
+    t.string   "name"
+    t.text     "description"
+    t.text     "link"
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
   end
 
   create_table "takeout_restaurants", :force => true do |t|
