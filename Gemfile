@@ -23,6 +23,9 @@ end
 gem 'jquery-rails'
 gem 'mechanize'
 gem 'nokogiri'
+gem 'omniauth'
+gem 'omniauth-netflix'
+# gem 'spot'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

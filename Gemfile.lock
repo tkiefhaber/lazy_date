@@ -42,6 +42,7 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    hashie (1.2.0)
     hike (1.2.1)
     i18n (0.6.0)
     journey (1.0.4)
@@ -67,6 +68,16 @@ GEM
     net-http-persistent (2.7)
     nokogiri (1.5.4)
     ntlm-http (0.1.1)
+    oauth (0.4.6)
+    omniauth (1.1.0)
+      hashie (~> 1.2)
+      rack
+    omniauth-netflix (0.2.0)
+      multi_json (~> 1.0)
+      omniauth-oauth (~> 1.0)
+    omniauth-oauth (1.0.1)
+      oauth
+      omniauth (~> 1.0)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -125,6 +136,8 @@ DEPENDENCIES
   jquery-rails
   mechanize
   nokogiri
+  omniauth
+  omniauth-netflix
   rails (= 3.2.5)
   sass-rails (~> 3.2.3)
   sqlite3
