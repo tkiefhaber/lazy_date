@@ -3,9 +3,9 @@
 FactoryGirl.define do
   factory :restaurant do
     delivers false
-    takeout false
-    name "MyString"
-    description "MyText"
-    link "MyText"
+    takeout true
+    name "Sample Restaurant"
+    description "This place is super tasty"
+    link "http://google.com"
   end
 end
