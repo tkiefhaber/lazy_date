@@ -25,4 +25,10 @@ describe Category do
     category.movies << movie
     category.movies.should include(movie)
   end
+
+  it "can associate with stories" do
+    story = FactoryGirl.create(:story)
+    category.stories << story
+    category.stories.should include(story)
+  end
 end

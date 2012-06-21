@@ -3,6 +3,7 @@ class Cuisine < ActiveRecord::Base
 
   has_many :restaurant_cuisines
   has_many :restaurants, :through => :restaurant_cuisines
+  has_many :stories
 
   validates_presence_of :name
 end

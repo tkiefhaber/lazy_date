@@ -21,4 +21,10 @@ describe Cuisine do
     cuisine.restaurants << restaurant
     cuisine.restaurants.should include(restaurant)
   end
+
+  it "can associate with stories" do
+    story = FactoryGirl.create(:story)
+    cuisine.stories << story
+    cuisine.stories.should include(story)
+  end
 end
