@@ -6,7 +6,7 @@ require 'open-uri'
 require 'mechanize'
 
   takeout = Mechanize.new
-  takeout_index = takeout.open get("https://livingsocial.com/menus/locations?mode=takeout")
+  takeout_index = takeout.get("https://livingsocial.com/menus/locations?mode=takeout")
     takeout_index.links_with(:href => %r{/menus/locations/category/}).each do |category|
       individual_category = category.click
 

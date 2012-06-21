@@ -6,6 +6,13 @@ gem 'rails', '3.2.5'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'rspec-rails'
+gem 'capybara'
+gem 'launchy'
+gem 'guard'
+gem 'guard-rspec'
+gem 'growl'
+gem 'factory_girl_rails'
 
 
 # Gems used only for assets and not required
@@ -25,7 +32,8 @@ gem 'mechanize'
 gem 'nokogiri'
 gem 'omniauth'
 gem 'omniauth-netflix'
-# gem 'spot'
+gem 'jquery_mobile_rails'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
