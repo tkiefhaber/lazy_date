@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title><%= @story.name %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+  <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+</head>
+<body>
+
+<div data-role="page">
+
+  <div data-role="header">
+    <h1>Your Date in a Box</h1>
+  </div><!-- /header -->
+
+  <div data-role="content">
+    <div class="ui-grid-a">
+      <div class="ui-block-a">
+        <h1><%= @story.name %></h1>
+        <h4><%= @story.description %>.</h4>
+      </div>
+      <div class="ui-block-b">
+        <img src=<%= @story.image_url %> height="100" border="0" alt="TestStoryImage" /></a>
+      </div>
+    </div><!-- /grid-a -->
+    ____________________________________________
+    <div class="food">
+
+
+    </div>
+    <div class="ui-grid-c">
+      <div class="ui-block-a">
+        </br>
+        <img src="https://a248.e.akamai.net/si.lscdn.net/imgs/760c4307-0d96-4345-9856-d248b849bb4b/139_q60.jpg" height="100" border="0" alt="DinnerImage" /></a>
+      </div>
+      <div class="ui-block-b">
+        <h3> <%= link_to(@restaurant.name, @restaurant.link) %></h3>
+        <h5><%= @restaurant.description %></h5>
+      </div>
+    </div><!-- /grid-c -->
+    ____________________________________________
+    <div class="movie">
+
+
+    </div>
+    <div class="ui-grid-b">
+      <div class="ui-block-a">
+        <h3> <%= link_to(@movie.title, @movie.link) %></h3>
+        <h5><%= @movie.description %></h5>
+      </div>
+      <div class="ui-block-b">
+        </br>
+        <img src="https://netflix.hs.llnwd.net/e1/en_us/boxshots/large/70020728.jpg" height="100" border="0" alt="MovieImage" /></a>
+      </div>
+    </div><!-- /grid-b -->
+    ____________________________________________
+    <div class="music">
+      <h3> <%= link_to("Future Playlist", @movie.link) %></h3>
+      <h5> This music is going to be awesome! </h5>
+    </div>
+
+  </div><!-- /content -->
+  <div data-role="footer" data-id="foo1" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="a.html">Home</a></li>
+        <li><a href="b.html">Popular</a></li>
+        <li><a href="c.html">Picks</a></li>
+        <li><a href="d.html">Search</a></li>
+      </ul>
+    </div><!-- /navbar -->
+  </div><!-- /footer -->
+
+</div><!-- /page -->
+
+</body>
+</html>

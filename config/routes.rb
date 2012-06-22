@@ -1,8 +1,6 @@
 LazyDate::Application.routes.draw do
- root :to => "delivery_restaurants#index"
+ root :to => "stories#index"
 
- match "/auth/:provider/callback" => "sessions#create"
+ resources :stories
 
- resources :delivery_restaurants
- resources :takeout_restaurants
 end
