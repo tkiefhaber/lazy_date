@@ -5,4 +5,5 @@ class RestaurantCuisine < ActiveRecord::Base
   belongs_to :cuisine
 
   validates_presence_of :restaurant, :cuisine
+  validates_associated  :restaurant, :cuisine
 end

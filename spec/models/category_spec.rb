@@ -1,34 +1,30 @@
 require 'spec_helper'
 
 describe Category do
-  let(:category){ FactoryGirl.create(:category) }
+  let(:category){ FactoryGirl.build(:category) }
 
-  it "is valid" do
-    category.should be_valid
+  describe "validations" do
+    it "is valid" do
+      category.should be_valid
+    end
+
+    it "is not valid without a name" do
+      category.name = nil
+      category.should_not be_valid
+    end
   end
 
-  it "is not valid without a name" do
-    category.name = nil
-    category.should_not be_valid
-  end
+  describe "associations" do
+    it "can associate with a movie" do
+      movie = FactoryGirl.build(:movie)
+      category.movies << movie
+      category.movies.should include(movie)
+    end
 
-  it "has a name" do
-    category.should respond_to(:name)
-  end
-
-  it "has associate movies" do
-    category.movies.should be_kind_of(Enumerable)
-  end
-
-  it "can associate with a movie" do
-    movie = FactoryGirl.create(:movie)
-    category.movies << movie
-    category.movies.should include(movie)
-  end
-
-  it "can associate with stories" do
-    story = FactoryGirl.create(:story)
-    category.stories << story
-    category.stories.should include(story)
+    it "can associate with stories" do
+      story = FactoryGirl.build(:story)
+      category.stories << story
+      category.stories.should include(story)
+    end
   end
 end
