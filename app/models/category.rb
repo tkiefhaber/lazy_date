@@ -6,4 +6,8 @@ class Category < ActiveRecord::Base
 
   validates_presence_of :name
 
+  def random_movie
+    movies.sample
+  end
+
 end

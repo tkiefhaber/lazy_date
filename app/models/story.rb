@@ -8,4 +8,12 @@ class Story < ActiveRecord::Base
 
   validates_format_of :image_url, :with => /^(http|https):\/\//
   validates_format_of :image_url, :with => /\.(jpg|gif|jpeg|png)$/
+
+  def get_movie
+    Movie.find_by_category(category)
+  end
+
+  def get_restaurant
+    Restaurant.find_by_cuisine(cuisine)
+  end
 end

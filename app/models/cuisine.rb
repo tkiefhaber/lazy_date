@@ -6,4 +6,8 @@ class Cuisine < ActiveRecord::Base
   has_many :stories
 
   validates_presence_of :name
+
+  def random_restaurant
+    restaurants.sample
+  end
 end

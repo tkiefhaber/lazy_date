@@ -1,5 +1,7 @@
 LazyDate::Application.routes.draw do
- root :to => "stories#index"
+  get "home/index"
+
+ root :to => "home#index"
 
  resources :stories
 

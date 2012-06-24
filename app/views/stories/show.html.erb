@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title><%= @story.name %></title>
+  <title>Couch-Concierge</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
   <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
@@ -12,7 +12,7 @@
 <div data-role="page">
 
   <div data-role="header">
-    <h1>Your Date in a Box</h1>
+    <h1><%= @story.name %></h1>
   </div><!-- /header -->
 
   <div data-role="content">
@@ -22,7 +22,7 @@
         <h4><%= @story.description %>.</h4>
       </div>
       <div class="ui-block-b">
-        <img src=<%= @story.image_url %> height="100" border="0" alt="TestStoryImage" /></a>
+        <img src=<%= @story.image_url %> border="0" alt="TestStoryImage" /></a>
       </div>
     </div><!-- /grid-a -->
     ____________________________________________
@@ -65,10 +65,9 @@
   <div data-role="footer" data-id="foo1" data-position="fixed">
     <div data-role="navbar">
       <ul>
-        <li><a href="a.html">Home</a></li>
-        <li><a href="b.html">Popular</a></li>
-        <li><a href="c.html">Picks</a></li>
-        <li><a href="d.html">Search</a></li>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Top", stories_path %></li>
+        <li><%= link_to "Search", stories_path %></li>
       </ul>
     </div><!-- /navbar -->
   </div><!-- /footer -->

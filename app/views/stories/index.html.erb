@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Couch-Concierge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+  <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+</head>
+<body>
+  <div data-role="page">
+
+  <div data-role="header">
+    <h1>Concierge Desk</h1>
+  </div><!-- /header -->
+
+  <div data-role="content">
+    <div data-role="content-primary">
+      <ul data-role="listview" class="ui-listview">
+        <% @stories.each do |story| %>
+          <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-icon-right ui-li-hasarrow ui-li ui-li-has-thumb ui-btn-up-c">
+            <img src=<%= story.image_url %> class="ui-li-thumb">
+            <div class="ui-btn-inner ui-li">
+              <div class="ui-btn-text">
+                <a class="ui-link-inherit" href=<% link_to story %>>
+                  <h3 class="ui-li-heading"><%= story.name %></h3>
+                  <p class="ui-li-desc"><%= story.description %></p>
+                </a>
+              </div>
+              <span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
+            </div>
+          <% end %>
+        </li>
+      </ul>
+    </div><!-- /content-primary -->
+  </div><!-- /content -->
+  <div data-role="footer" data-id="foo1" data-position="fixed">
+      <div data-role="navbar">
+        <ul>
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Top", stories_path %></li>
+          <li><%= link_to "Search", stories_path %></li>
+        </ul>
+      </div><!-- /navbar -->
+    </div><!-- /footer -->
+
+  </div><!-- /page -->
+
+</body>
+</html>

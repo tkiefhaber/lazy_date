@@ -7,4 +7,8 @@ class Restaurant < ActiveRecord::Base
   validates_presence_of :name, :link, :description
   validates_format_of :link, :with => /^(http|https):\/\//
 
+  def self.find_by_cuisine(cuisine)
+    cuisine.random_restaurant
+  end
+
 end
