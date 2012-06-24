@@ -8,7 +8,7 @@
   <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
 </head>
 <body>
-  <div data-role="page">
+  <div data-role="page" data-theme="c">
 
   <div data-role="header">
     <h1>Concierge Desk</h1>
@@ -22,7 +22,7 @@
             <img src=<%= story.image_url %> class="ui-li-thumb">
             <div class="ui-btn-inner ui-li">
               <div class="ui-btn-text">
-                <a class="ui-link-inherit" href=<% link_to story %>>
+                <a href="stories/<%= story.id %>" class="ui-link-inherit" data-transition="slide">
                   <h3 class="ui-li-heading"><%= story.name %></h3>
                   <p class="ui-li-desc"><%= story.description %></p>
                 </a>

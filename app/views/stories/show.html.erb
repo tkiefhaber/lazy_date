@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<div data-role="page">
+<div data-role="page" data-theme="c">
 
   <div data-role="header">
     <h1><%= @story.name %></h1>
@@ -22,7 +22,7 @@
         <h4><%= @story.description %>.</h4>
       </div>
       <div class="ui-block-b">
-        <img src=<%= @story.image_url %> border="0" alt="TestStoryImage" /></a>
+        <img src=<%= @story.image_url %> height="150" border="0" alt="TestStoryImage" /></a>
       </div>
     </div><!-- /grid-a -->
     ____________________________________________
@@ -33,7 +33,7 @@
     <div class="ui-grid-c">
       <div class="ui-block-a">
         </br>
-        <img src="https://a248.e.akamai.net/si.lscdn.net/imgs/760c4307-0d96-4345-9856-d248b849bb4b/139_q60.jpg" height="100" border="0" alt="DinnerImage" /></a>
+        <img src=<%= @restaurant.image_url %> height="150" border="0" alt="DinnerImage" /></a>
       </div>
       <div class="ui-block-b">
         <h3> <%= link_to(@restaurant.name, @restaurant.link) %></h3>
@@ -52,7 +52,7 @@
       </div>
       <div class="ui-block-b">
         </br>
-        <img src="https://netflix.hs.llnwd.net/e1/en_us/boxshots/large/70020728.jpg" height="100" border="0" alt="MovieImage" /></a>
+        <img src=<%= @movie.image_url %> height="100" border="0" alt="MovieImage" /></a>
       </div>
     </div><!-- /grid-b -->
     ____________________________________________

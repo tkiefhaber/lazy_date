@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120621212647) do
+ActiveRecord::Schema.define(:version => 20120624203243) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -25,15 +25,15 @@ ActiveRecord::Schema.define(:version => 20120621212647) do
     t.datetime "updated_at", :null => false
   end
 
-  # create_table "delivery_restaurants", :force => true do |t|
-  #   t.string   "name"
-  #   t.text     "description"
-  #   t.string   "phone"
-  #   t.string   "address"
-  #   t.string   "category"
-  #   t.datetime "created_at",  :null => false
-  #   t.datetime "updated_at",  :null => false
-  # end
+  create_table "delivery_restaurants", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "phone"
+    t.string   "address"
+    t.string   "category"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "movie_categories", :force => true do |t|
     t.integer  "movie_id"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(:version => 20120621212647) do
     t.text     "link"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.text     "image_url"
   end
 
   create_table "restaurant_cuisines", :force => true do |t|
@@ -65,6 +66,7 @@ ActiveRecord::Schema.define(:version => 20120621212647) do
     t.text     "link"
     t.datetime "created_at",                     :null => false
     t.datetime "updated_at",                     :null => false
+    t.text     "image_url"
   end
 
   create_table "stories", :force => true do |t|
@@ -77,14 +79,14 @@ ActiveRecord::Schema.define(:version => 20120621212647) do
     t.text     "image_url"
   end
 
-  # create_table "takeout_restaurants", :force => true do |t|
-  #   t.string   "name"
-  #   t.text     "description"
-  #   t.string   "phone"
-  #   t.string   "address"
-  #   t.string   "category"
-  #   t.datetime "created_at",  :null => false
-  #   t.datetime "updated_at",  :null => false
-  # end
+  create_table "takeout_restaurants", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "phone"
+    t.string   "address"
+    t.string   "category"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
 end
