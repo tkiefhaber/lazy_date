@@ -22,7 +22,7 @@
             <img src=<%= story.image_url %> class="ui-li-thumb">
             <div class="ui-btn-inner ui-li">
               <div class="ui-btn-text">
-                <a href="stories/<%= story.id %>" class="ui-link-inherit" data-transition="slide">
+                <a href="stories/<%= story.id %>" class="ui-link-inherit" >
                   <h3 class="ui-li-heading"><%= story.name %></h3>
                   <p class="ui-li-desc"><%= story.description %></p>
                 </a>
@@ -34,15 +34,7 @@
       </ul>
     </div><!-- /content-primary -->
   </div><!-- /content -->
-  <div data-role="footer" data-id="foo1" data-position="fixed">
-      <div data-role="navbar">
-        <ul>
-          <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Top", stories_path %></li>
-          <li><%= link_to "Search", stories_path %></li>
-        </ul>
-      </div><!-- /navbar -->
-    </div><!-- /footer -->
+
 
   </div><!-- /page -->
 
