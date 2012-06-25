@@ -1,5 +1,5 @@
 class Story < ActiveRecord::Base
-  attr_accessible :category_id, :cuisine_id
+  attr_accessible :category_id, :cuisine_id, :name, :description, :image_url
 
   belongs_to :cuisine
   belongs_to :category

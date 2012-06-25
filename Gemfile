@@ -13,6 +13,7 @@ gem 'guard'
 gem 'guard-rspec'
 gem 'growl'
 gem 'factory_girl_rails'
+gem 'faraday'
 
 
 # Gems used only for assets and not required

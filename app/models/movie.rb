@@ -1,5 +1,5 @@
 class Movie < ActiveRecord::Base
-  attr_accessible :description, :link, :title
+  attr_accessible :description, :link, :title, :image_url
   has_many :movie_categories
   has_many :categories, :through => :movie_categories
 
@@ -9,5 +9,7 @@ class Movie < ActiveRecord::Base
   def self.find_by_category(category)
     category.random_movie
   end
+
+
 
 end

@@ -1,5 +1,5 @@
 class MovieCategory < ActiveRecord::Base
-  attr_accessible :category, :movie
+  attr_accessible :category, :movie, :movie_id, :category_id
   belongs_to :movie
   belongs_to :category
 

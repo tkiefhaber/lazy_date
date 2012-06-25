@@ -1,5 +1,5 @@
 class Restaurant < ActiveRecord::Base
-  attr_accessible :delivers, :description, :link, :name, :takeout
+  attr_accessible :delivers, :description, :link, :name, :takeout, :image_url
 
   has_many :restaurant_cuisines
   has_many :cuisines, :through => :restaurant_cuisines
