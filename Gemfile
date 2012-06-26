@@ -5,15 +5,32 @@ gem 'rails', '3.2.5'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
-gem 'rspec-rails'
-gem 'capybara'
-gem 'launchy'
-gem 'guard'
-gem 'guard-rspec'
-gem 'growl'
-gem 'factory_girl_rails'
 gem 'faraday'
+
+
+group :production do
+  gem 'pg'
+end
+
+group :development, :test do
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'newrelic_rpm'
+  gem 'rack-perftools_profiler', :require => 'rack/perftools_profiler'
+  gem 'rspec-rails'
+  gem 'simplecov', :require => false
+  gem 'sqlite3'
+end
+
+group :test do
+  gem 'cane', :git => "git://github.com/square/cane.git"
+  gem 'capybara'
+  gem 'faker'
+  gem 'growl'
+  gem 'guard-rspec'
+  gem 'launchy'
+  gem 'reek', :git => "git://github.com/mvz/reek.git", :branch => "ripper_ruby_parser-2"
+end
 
 
 # Gems used only for assets and not required
