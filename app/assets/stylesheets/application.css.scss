@@ -12,3 +12,39 @@
  *= require_tree .
  *= require jquery.mobile
  */
+
+$darkblue: #0F3F8C;
+$lightblue: #56D7E8;
+$purple: #5C428A;
+$magenta: #E64598;
+$green: #BAE37D;
+$orange: #FF590D;
+
+.ui-btn-text{
+  margin-left:-90px !important;
+}
+
+.ui-li-thumb{
+  height:120px !important;
+  width:75px !important;
+  margin-top: 10px !important;
+}
+
+.ui-link-inherit{
+  height: 70px !important;
+}
+
+.ui-li-heading{
+  font-size:18px !important;
+  color: $orange !important;
+}
+
+.ui-header .ui-bar-a{
+  color: $darkblue !important;
+}
+
+.ui-block-b{
+  margin-bottom:10px !important;
+}
+
+
