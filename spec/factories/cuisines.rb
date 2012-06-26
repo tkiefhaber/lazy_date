@@ -2,6 +2,6 @@
 
 FactoryGirl.define do
   factory :cuisine do
-    name "MyString"
+    name "Italian"
   end
 end

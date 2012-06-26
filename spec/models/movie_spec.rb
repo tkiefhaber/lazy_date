@@ -29,6 +29,20 @@ describe Movie do
       movie.link = "google.com"
       movie.should_not be_valid
     end
+
+    it "is not valid without an image_url" do
+      movie.image_url = nil
+      movie.should_not be_valid
+    end
+
+    it "has a properly formatted image_url" do
+      movie.image_url = "http://images.google.com/burger.jpg"
+      movie.should be_valid
+      movie.image_url = "image.com/burger.jpg"
+      movie.should_not be_valid
+      movie.image_url = "http://images.google.com/burger.html"
+      movie.should_not be_valid
+    end
   end
 
   describe "associations" do

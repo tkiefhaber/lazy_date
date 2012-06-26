@@ -15,7 +15,6 @@ end
 group :development, :test do
   gem 'database_cleaner'
   gem 'factory_girl_rails'
-  gem 'newrelic_rpm'
   gem 'rack-perftools_profiler', :require => 'rack/perftools_profiler'
   gem 'rspec-rails'
   gem 'simplecov', :require => false
@@ -29,7 +28,7 @@ group :test do
   gem 'growl'
   gem 'guard-rspec'
   gem 'launchy'
-  gem 'reek', :git => "git://github.com/mvz/reek.git", :branch => "ripper_ruby_parser-2"
+  gem 'reek'
 end
 
 

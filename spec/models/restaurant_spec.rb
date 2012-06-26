@@ -8,7 +8,7 @@ describe Restaurant do
       restaurant.should be_valid
     end
 
-    %w(name description link).each do |attribute|
+    %w(name description link image_url).each do |attribute|
       it "is not valid without #{attribute}" do
         setter = (attribute + "=").to_sym
         restaurant.send(setter, nil)
@@ -20,6 +20,16 @@ describe Restaurant do
       restaurant.link = "http://google.com"
       restaurant.should be_valid
       restaurant.link = "bloggle.goggle"
+      restaurant.should_not be_valid
+    end
+
+
+    it "has a properly formatted image_url" do
+      restaurant.image_url = "http://images.google.com/burger.jpg"
+      restaurant.should be_valid
+      restaurant.image_url = "image.com/burger.jpg"
+      restaurant.should_not be_valid
+      restaurant.image_url = "http://images.google.com/burger.html"
       restaurant.should_not be_valid
     end
   end

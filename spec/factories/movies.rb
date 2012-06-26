@@ -2,8 +2,9 @@
 
 FactoryGirl.define do
   factory :movie do
-    title "Sample Title"
-    description "Sample Description"
+    title "Good Fellas"
+    description "Mobsters make good money"
     link "http://example.com"
+    image_url "http://kalbiburger.com/wp-content/uploads/2010/06/Kalbi_Burger.jpg"
   end
 end

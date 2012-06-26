@@ -7,7 +7,8 @@ class Cuisine < ActiveRecord::Base
 
   validates_presence_of :name
 
-  def random_restaurant
+
+  def find_restaurant
     restaurants.sample
   end
 end

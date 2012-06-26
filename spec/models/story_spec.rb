@@ -28,13 +28,42 @@ describe Story do
       story.should_not be_valid
     end
 
-    it "has a properly formatted link" do
+    it "is not valid without an image_url" do
+      story.image_url = nil
+      story.should_not be_valid
+    end
+
+    it "has a properly formatted image_url" do
       story.image_url = "http://images.google.com/burger.jpg"
       story.should be_valid
       story.image_url = "image.com/burger.jpg"
       story.should_not be_valid
       story.image_url = "http://images.google.com/burger.html"
       story.should_not be_valid
+    end
+  end
+
+  describe "getting a movie" do
+    let!(:story)     { FactoryGirl.create(:story) }
+    let!(:category)  { FactoryGirl.create(:category) }
+    let!(:movie)     { FactoryGirl.create(:movie) }
+
+    it "provides a movie from the specified category" do
+      story.category = category
+      category.movies << movie
+      story.get_movie.should == movie
+    end
+  end
+
+  describe "getting a restaurant" do
+    let!(:story)      { FactoryGirl.create(:story) }
+    let!(:cuisine)    { FactoryGirl.create(:cuisine) }
+    let!(:restaurant) { FactoryGirl.create(:restaurant) }
+
+    it "provides a movie from the specified category" do
+      story.cuisine = cuisine
+      cuisine.restaurants << restaurant
+      story.get_restaurant.should == restaurant
     end
   end
 end

@@ -10,10 +10,10 @@ class Story < ActiveRecord::Base
   validates_format_of :image_url, :with => /\.(jpg|gif|jpeg|png)$/
 
   def get_movie
-    Movie.find_by_category(category)
+    category.find_movie
   end
 
   def get_restaurant
-    Restaurant.find_by_cuisine(cuisine)
+    cuisine.find_restaurant
   end
 end
