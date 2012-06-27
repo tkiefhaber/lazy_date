@@ -19,17 +19,19 @@ require 'mechanize'
             info = Nokogiri::HTML(open(individual_restaurant.uri))
             name = info.css("title").text
             description = info.css("p.desc").text
-            phone = info.css("div.info ul li a").text.gsub("view map", "")
-            address = info.css("div.info ul li:last-child p:nth-child(2)").text.gsub("view map", "")
-            restaurant_category = category.to_s.gsub(/[^a-zA-Z ]/, '').strip
+            image_url = info.at(".preview")["src"]
+            link = info.at(".footer a")["href"]
+            restaurant_cuisine = category.to_s.gsub(/[^a-zA-Z ]/, '').strip
 
-            db_takeout_restaurant = TakeoutRestaurant.find_or_initialize_by_name(name)
+            db_takeout_restaurant = Restaurant.find_or_initialize_by_name(name)
+            c = Cusine.find_or_create_by_name(restaurant_cuisine)
+            db_takeout_restaurant.cusines << c
             db_takeout_restaurant.name = name
             db_takeout_restaurant.description = description
-            db_takeout_restaurant.phone = phone
-            db_takeout_restaurant.address = address
-            db_takeout_restaurant.category = restaurant_category
+            db_takeout_restaurant.link = "https://livingsocial.com" + link
+            db_takeout_restaurant.image_url = image_url
             db_takeout_restaurant.save
+            
           end
         end
     end

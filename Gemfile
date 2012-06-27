@@ -6,6 +6,7 @@ gem 'rails', '3.2.5'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'faraday'
+# gem 'netflix_gem' :git => "git://github.com/tkiefhaber/netflix_gem.git"
 
 
 group :production do

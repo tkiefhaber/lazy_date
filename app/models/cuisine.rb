@@ -11,4 +11,6 @@ class Cuisine < ActiveRecord::Base
   def find_restaurant
     restaurants.sample
   end
+
+  
 end

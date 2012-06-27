@@ -23,6 +23,10 @@ $orange: #FF590D;
 .ui-btn-text{
 }
 
+h1{
+	color:$darkblue;
+}
+
 .ui-li-thumb{
   height:120px !important;
   width:75px !important;
@@ -32,11 +36,12 @@ $orange: #FF590D;
 .ui-link-inherit{
   height: 70px !important;
   padding-left: 0px !important;
+  white-space: normal !important;
 }
 
 .ui-li-heading{
   font-size:18px !important;
-  color: $orange !important;
+  color: $darkblue !important;
 }
 
 .ui-header .ui-bar-a{
@@ -45,5 +50,14 @@ $orange: #FF590D;
 
 .ui-block-b{
   margin-bottom:10px !important;
+}
+
+.ui-li-desc{
+	white-space: normal !important;
+	text-overflow: ellipsis !important;
+}
+
+.ui-bar-a{
+	color:$lightblue !important;
 }
 

@@ -3,7 +3,7 @@
   <head>
   <title>Couch-Concierge</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/stylesheets.jquery_stle.css" />
+  <link rel="stylesheet" href="jquery_style.css" />
 
 </head>
 <body>
@@ -11,7 +11,7 @@
   <div data-role="page" data-theme="c">
 
     <div data-role="header">
-      <h1><%= @story.name %></h1>
+      <h2><%= @story.name %></h2>
     </div><!-- /header -->
 
     <div data-role="content">
@@ -21,7 +21,7 @@
           <h4><%= @story.description %>.</h4>
         </div>
         <div class="ui-block-b">
-          <img src=<%= @story.image_url %> height="125px" border="0" alt="TestStoryImage" /></a>
+          <img src=<%= @story.image_url %> align="right" height="125px" border="0" alt="TestStoryImage" /></a>
         </div>
       </div><!-- /grid-a -->
 

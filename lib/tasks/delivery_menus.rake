@@ -5,9 +5,10 @@ require 'nokogiri'
 require 'open-uri'
 require 'mechanize'
 
-  takeout = Mechanize.new
-  takeout_index = takeout.get("https://livingsocial.com/menus/locations?mode=delivery")
-    takeout_index.links_with(:href => %r{/menus/locations/category/}).each do |category|
+  delivery = Mechanize.new
+  delivery_index = delivery.get("https://livingsocial.com/menus/locations?mode=delivery")
+    
+    delivery_index.links_with(:href => %r{/menus/locations/category/}).each do |category|
       individual_category = category.click
 
         1.upto(40) do |page_num|
@@ -19,17 +20,21 @@ require 'mechanize'
             info = Nokogiri::HTML(open(individual_restaurant.uri))
             name = info.css("title").text
             description = info.css("p.desc").text
-            phone = info.css("div.info ul li a").text.gsub("view map", "")
-            address = info.css("div.info ul li:last-child p:nth-child(2)").text.gsub("view map", "")
-            restaurant_category = category.to_s.gsub(/[^a-zA-Z ]/, '').strip
+            image_url = info.at(".preview")["src"]
+            link = info.at(".footer a")["href"]
+            restaurant_cuisine = category.to_s.gsub(/[^a-zA-Z ]/, '').strip
 
-            db_takeout_restaurant = TakeoutRestaurant.find_or_initialize_by_name(name)
-            db_takeout_restaurant.name = name
-            db_takeout_restaurant.description = description
-            db_takeout_restaurant.phone = phone
-            db_takeout_restaurant.address = address
-            db_takeout_restaurant.category = restaurant_category
-            db_takeout_restaurant.save
+            # db_delivery_restaurant = Restaurant.find_or_initialize_by_name(name)
+            # db_delivery_restaurant.name = name
+            # db_delivery_restaurant.description = description
+            # db_delivery_restaurant.link = "https://livingsocial.com" + link
+            # db_delivery_restaurant.image_url = image_url
+            # db_delivery_restaurant.cuisine = restaurant_cuisine
+            # db_delivery_restaurant.delivers = true
+            # db_delivery_restaurant.save
+
+            puts name
+            
           end
         end
     end
