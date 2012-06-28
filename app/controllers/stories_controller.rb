@@ -16,4 +16,12 @@ class StoriesController < ApplicationController
   	@categories = Category.all
   end
 
+  def create
+    @story = Story.new(params["story"])
+    if @story.save
+      redirect_to stories_path
+    else
+      render :new
+    end
+  end
 end

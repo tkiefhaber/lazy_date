@@ -10,11 +10,11 @@ require 'mechanize'
     takeout_index.links_with(:href => %r{/menus/locations/category/}).each do |category|
       individual_category = category.click
 
-        1.upto(40) do |page_num|
+        1.upto(10) do |page_num|
           agent = Mechanize.new
 
           td_doc = agent.get("https://livingsocial.com/menus/locations/category/#{category}?page=#{page_num}")
-          td_doc.links_with(:href => %r{/menus/locations/}).each do |restaurant|
+          td_doc.links_with(:href => %r{/menus/locations/+\d}).each do |restaurant|
             individual_restaurant = restaurant.click
             info = Nokogiri::HTML(open(individual_restaurant.uri))
             name = info.css(".title").text.split(":")[0]
@@ -32,7 +32,7 @@ require 'mechanize'
             c = Cuisine.find_or_create_by_name(restaurant_cuisine)
             db_takeout_restaurant.cuisines << c
 
-            # puts db_takeout_restaurant.name
+            puts db_takeout_restaurant.name
             
           end
         end

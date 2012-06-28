@@ -2,9 +2,13 @@
 <html>
   <head>
   <title>Couch-Concierge</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "jquery_style", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="jquery_style.css" />
-
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+  
 </head>
 <body>
 
@@ -21,7 +25,7 @@
           <h4><%= @story.description %>.</h4>
         </div>
         <div class="ui-block-b">
-          <img src=<%= @story.image_url %> align="right" height="125px" border="0" alt="TestStoryImage" /></a>
+          <img src=<%= @story.image_url %> align="right" width="100px" border="0" alt="TestStoryImage" /></a>
         </div>
       </div><!-- /grid-a -->
 

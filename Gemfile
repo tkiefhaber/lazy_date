@@ -6,6 +6,7 @@ gem 'rails', '3.2.5'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'faraday'
+gem 'simple_form'
 # gem 'netflix_gem' :git => "git://github.com/tkiefhaber/netflix_gem.git"
 
 
