@@ -10,4 +10,10 @@ class StoriesController < ApplicationController
     @stories = Story.all
   end
 
+  def new
+  	@story = Story.new
+  	@cuisines = Cuisine.all
+  	@categories = Category.all
+  end
+
 end
