@@ -5,48 +5,44 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <meta name="viewport" content="width=device-width, initial-scale=1"> 
-  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
-  
   <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-  <div data-role="page" data-theme="c">
+  </head>
+  <body>
+    <div data-role="page" data-theme="c">
 
-  <div data-role="header">
-    <h2>Concierge Desk</h2>
-  </div><!-- /header -->
+      <div data-role="header">
+        <h2>Concierge Desk</h2>
+      </div><!-- /header -->
 
-  <div data-role="content">
-    <div data-role="content-primary">
-      <ul data-role="listview" class="ui-listview">
-        <% @stories.each do |story| %>
-          <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-icon-right ui-li-hasarrow ui-li ui-li-has-thumb ui-btn-up-c">
-            <img src=<%= story.image_url %> class="ui-li-thumb">
-            <div class="ui-btn-inner ui-li">
-              <div class="ui-btn-text">
-                <a href="stories/<%= story.id %>" class="ui-link-inherit" >
-                  <h3 class="ui-li-heading"><%= story.name %></h3>
-                  <p class="ui-li-desc"><%= story.description %></p>
-                </a>
-              </div>
-              <span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
-            </div>
-          <% end %>
-        </li>
-      </ul>
-    </div><!-- /content-primary -->
-  </div><!-- /content -->
-  <div data-role="footer" data-id="foo1" data-position="fixed">
-    <div data-role="navbar">
-      <ul>
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Create", new_story_path %></li>
-      </ul>
-    </div><!-- /navbar -->
-  </div><!-- /footer -->
+      <div data-role="content">
+        <div data-role="content-primary">
+          <ul data-role="listview" class="ui-listview">
+            <% @stories.each do |story| %>
+              <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-icon-right ui-li-hasarrow ui-li ui-li-has-thumb ui-btn-up-c">
+                <img src=<%= story.image_url %> class="ui-li-thumb">
+                <div class="ui-btn-inner ui-li">
+                  <div class="ui-btn-text">
+                    <a href="stories/<%= story.id %>" class="ui-link-inherit" >
+                      <h3 class="ui-li-heading"><%= story.name %></h3>
+                      <p class="ui-li-desc"><%= story.description %></p>
+                    </a>
+                  </div>
+                  <span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
+                </div>
+              <% end %>
+            </li>
+          </ul>
+        </div><!-- /content-primary -->
+      </div><!-- /content -->
+      <div data-role="footer" data-id="foo1" data-position="fixed">
+        <div data-role="navbar">
+          <ul>
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "Create", new_story_path %></li>
+          </ul>
+        </div><!-- /navbar -->
+      </div><!-- /footer -->
 
-  </div><!-- /page -->
-
-</body>
+    </div><!-- /page -->
+  </body>
 </html>
