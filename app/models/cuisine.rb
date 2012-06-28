@@ -6,6 +6,7 @@ class Cuisine < ActiveRecord::Base
   has_many :stories
 
   validates_presence_of :name
+  validates_uniqueness_of :name
 
 
   def find_restaurant
