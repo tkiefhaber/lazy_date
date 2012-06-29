@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120628051752) do
+ActiveRecord::Schema.define(:version => 20120629042142) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -67,6 +67,13 @@ ActiveRecord::Schema.define(:version => 20120628051752) do
     t.string   "name"
     t.text     "description"
     t.text     "image_url"
+    t.integer  "votes_count"
+  end
+
+  create_table "votes", :force => true do |t|
+    t.integer  "story_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

@@ -4,6 +4,7 @@ class StoriesController < ApplicationController
     @story = Story.find(params[:id])
     @movie = @story.get_movie
     @restaurant = @story.get_restaurant
+    @vote = Vote.new(params[:vote])
   end
 
   def index

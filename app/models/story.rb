@@ -3,6 +3,7 @@ class Story < ActiveRecord::Base
 
   belongs_to :cuisine
   belongs_to :category
+  has_many :votes
 
   validates_presence_of :cuisine, :category, :name, :description, :image_url
 
