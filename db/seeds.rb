@@ -29,10 +29,9 @@ Movie.create([
     :link => "http://movies.netflix.com/WiMovie/8_1_2/60021830?trkid=7808591",
     :image_url => "http://cdn-0.nflximg.com/en_us/boxshots/ghd/60021830.jpg"
   }, 
-  # Action & Adventure
   { 
     :title => "Dirty Harry",
-    :description => "When a madman dubbed the \"Scorpio Killer\" terrorizes San Francisco, hard-boiled cop Harry Callahan (Clint Eastwood) -- famous for his take-no-prisoners approach to law enforcement -- is tasked with hunting down the psychopath. Harry eventually collars Scorpio in the process of rescuing a kidnap victim, only to see him walk on technicalities.",
+    :description => "When a madman dubbed the 'Scorpio Killer' terrorizes San Francisco, hard-boiled cop Harry Callahan (Clint Eastwood) -- famous for his take-no-prisoners approach to law enforcement -- is tasked with hunting down the psychopath. Harry eventually collars Scorpio in the process of rescuing a kidnap victim, only to see him walk on technicalities.",
     :link => "http://movies.netflix.com/WiMovie/Dirty_Harry/445522?trkid=4422469",
     :image_url => "http://cdn-2.nflximg.com/images/1415/1291415.jpg"
   }, 
@@ -44,7 +43,7 @@ Movie.create([
   }, 
   { 
     :title => "True Grit",
-    :description => "After drifter Tom Chaney (Josh Brolin) murders her father, 14-year-old Mattie Ross (Hailee Steinfeld) hires alcoholic U.S. Marshal Reuben "Rooster" Cogburn (Jeff Bridges) to help her exact revenge. The disreputable lawman still has grit, though, and mounts an epic search. Joining the duo on their quest is a Texas Ranger (Matt Damon) who's also hunting for Chaney in this updated Western that received multiple Oscar nods, including Best Picture.",
+    :description => "After drifter Tom Chaney (Josh Brolin) murders her father, 14-year-old Mattie Ross (Hailee Steinfeld) hires alcoholic U.S. Marshal Reuben 'Rooster' Cogburn (Jeff Bridges) to help her exact revenge. The disreputable lawman still has grit, though, and mounts an epic search. Joining the duo on their quest is a Texas Ranger (Matt Damon) who's also hunting for Chaney in this updated Western that received multiple Oscar nods, including Best Picture.",
     :link => "http://movies.netflix.com/WiMovie/True_Grit/70142543?trkid=4368078",
     :image_url => "http://cdn-3.nflximg.com/images/6283/1086283.jpg"
   }, 
@@ -59,9 +58,7 @@ Movie.create([
     :description => "In this Marvel Comics-inspired action flick, thunder god Thor finds himself banished by his father, Odin, and forced to live among humans on Earth to learn humility. Can Thor regain his powers and return home?",
     :link => "http://movies.netflix.com/WiMovie/Thor/70141586?trkid=4380540",
     :image_url => "http://cdn-6.nflximg.com/images/9709/1059709.jpg"
-  }, 
-
-  #Children & Families 
+  },  
   { 
     :title => "Judy Moody and the NOT Bummer Summer",
     :description => "In this family film based on Megan McDonald's children's books about never-dull third-grader Judy Moody, the capricious Miss Moody embarks on a summer adventure with her brother, Stink, and always-up-for-fun Aunt Opal (played by Heather Graham).",
@@ -91,8 +88,7 @@ Movie.create([
     :description => "The lovable pachyderm who stars in Jean de Brunhoff's charming children's books makes the leap from page to film in this animated adventure. With Celeste and the always-humorous monkey, Zephir, by his side, Babar is ready to take on Rataxes, a rhino who's taken charge of Babar's beloved Elephantland. Who will prevail?",
     :link => "http://movies.netflix.com/WiMovie/Babar_The_Movie/60033437?trkid=4419457",
     :image_url => "http://cdn-7.nflximg.com/images/5982/1045982.jpg"
-  },
-  # Classics 
+  }, 
   {
     :title => "Arsenic and Old Lace",
     :description => "Stellar performances highlight this delightfully witty adaptation of the hit Broadway play about two dotty spinsters with a peculiar avocation.",
@@ -122,8 +118,7 @@ Movie.create([
     :description => "In this Blake Edwards-directed adaptation of Truman Capote's novel, fortune hunter Holly Golightly (Audrey Hepburn) finds herself captivated by aspiring writer Paul Varjak (George Peppard), who's moved into her building on a wealthy woman's (Patricia Neal) dime. As romance blooms between Paul and Holly, Doc Golightly (Buddy Ebsen) shows up on the scene, revealing Holly's past. The film received Oscars for best song (\"Moon River\") and best score.",
     :link => "http://movies.netflix.com/WiMovie/Breakfast_at_Tiffany_s/330201?trkid=2361637",
     :image_url => "http://cdn-1.nflximg.com/images/1412/1291412.jpg"
-  }, 
-  # Comedy 
+  },  
   { 
     :title => "Office Space",
     :description => "http://movies.netflix.com/WiMovie/Office_Space/20358351?trkid=4448434",
@@ -154,7 +149,6 @@ Movie.create([
     :link => "http://movies.netflix.com/WiMovie/The_Big_Lebowski/1181532?trkid=4448434",
     :image_url => "http://cdn-2.nflximg.com/images/0357/1060357.jpg"
   },
-  # Drama
   {
     :title => "The Red Violin",
     :description => "When the long-lost \"red violin,\" a rare instrument crafted during the Italian Renaissance, shows up at a modern auction, it reveals its mysterious history -- and the lives of its previous owners -- in a series of flashbacks spanning three centuries. Samuel L. Jackson co-stars as a curious connoisseur in this acclaimed production that won an Oscar for Best Original Score and a Golden Globe nomination for Best Foreign Language Film.",
@@ -185,7 +179,6 @@ Movie.create([
     :link => "http://movies.netflix.com/Movie/The_Departed/70044689?trkid=439131",
     :image_url => "http://cdn-9.nflximg.com/images/7035/1067035.jpg"
   }, 
-  # Foreign
   {
     :title => "Shaolin",
     :description => "After ambushing and killing his rival -- losing everything in the process -- dispirited warlord Hou Jie turns to a Shaolin monastery seeking salvation. But his newfound redemption is soon put to the test in this kinetic kung fu saga.",
