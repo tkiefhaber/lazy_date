@@ -1,11 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-
 Movie.create([
   {
     :title => "Ong-Bak:The Thai Warrior",
@@ -246,7 +238,31 @@ MovieCategory.create([
     :category_id => 1
   },
   {
+    :movie_id => 6,
+    :category_id => 1
+  },
+  {
+    :movie_id => 7,
+    :category_id => 1
+  },
+  {
+    :movie_id => 8,
+    :category_id => 1
+  },
+  {
+    :movie_id => 9,
+    :category_id => 1
+  },
+  {
+    :movie_id => 10,
+    :category_id => 1
+  },
+  {
     :movie_id => 1,
+    :category_id => 7
+  },
+  {
+    :movie_id => 31,
     :category_id => 7
   },
   {
@@ -262,11 +278,51 @@ MovieCategory.create([
     :category_id => 2
   },
   {
+    :movie_id => 11,
+    :category_id => 2
+  },
+  {
+    :movie_id => 12,
+    :category_id => 2
+  },
+  {
+    :movie_id => 13,
+    :category_id => 2
+  },
+  {
+    :movie_id => 14,
+    :category_id => 2
+  },
+  {
+    :movie_id => 15,
+    :category_id => 2
+  },
+  {
     :movie_id => 3,
     :category_id => 5
   },
   {
     :movie_id => 5,
+    :category_id => 6
+  },
+  {
+    :movie_id => 26,
+    :category_id => 6
+  },
+  {
+    :movie_id => 27,
+    :category_id => 6
+  },
+  {
+    :movie_id => 28,
+    :category_id => 6
+  },
+  {
+    :movie_id => 29,
+    :category_id => 6
+  },
+  {
+    :movie_id => 30,
     :category_id => 6
   },
   {
@@ -276,19 +332,59 @@ MovieCategory.create([
   {
     :movie_id => 4,
     :category_id => 3
+  },
+  {
+    :movie_id => 16,
+    :category_id => 3
+  },
+  {
+    :movie_id => 17,
+    :category_id => 3
+  },
+  {
+    :movie_id => 18,
+    :category_id => 3
+  },
+  {
+    :movie_id => 19,
+    :category_id => 3
+  },
+  {
+    :movie_id => 20,
+    :category_id => 3
+  },
+  {
+    :movie_id => 21,
+    :category_id => 4
+  },
+  {
+    :movie_id => 22,
+    :category_id => 4
+  },
+  {
+    :movie_id => 23,
+    :category_id => 4
+  },
+  {
+    :movie_id => 24,
+    :category_id => 4
+  },
+  {
+    :movie_id => 25,
+    :category_id => 4
   }])
 
 Story.create([
   {
     :name => "Pizza Party",
-    :description => "Take down some pizza, maybe a couple of brews and get into some serious action",
+    :description => "Take down some pizza, maybe a couple of brews and get into some serious chuckles",
     :cuisine_id => 1,
-    :category_id => 1,
+    :category_id => 4,
     :image_url => "http://stockfresh.com/files/m/monkey_business/m/78/93773_stock-photo-teenage-boys-sitting-on-couch-eating-pizza-together.jpg"
   },
   {
-    :name => "Talk Thai",
-    :description => "Settle in for a little bit of Thai culture and cuisine",
+    :name => "Rosetta Stone",
+    :description => "You might not understand what they're saying, but this semi-exotic cuisine will make you feel more at home.",
     :cuisine_id => 5,
     :category_id => 7,
     :image_url => "http://wikitravel.org/upload/shared//thumb/5/51/Sukhothai.jpg/250px-Sukhothai.jpg"
@@ -308,11 +404,25 @@ Story.create([
     :image_url => "http://www.colourbox.com/preview/2296239-535917-moody-and-annoyed-attractive-teenager-girl-thinking-about-things.jpg"
   },
   {
-    :name => "Feel Smart",
+    :name => "Feeling Puncy",
+    :description => "Get your aggrssion out....in a passive aggressive way.",
+    :cuisine_id => 1,
+    :category_id => 1,
+    :image_url => "http://i691.photobucket.com/albums/vv280/staunchusa/ManBeingPunched.jpg"
+  },
+  {
+    :name => "Get Smart",
     :description => "Take a night to feel smart and read while you watch a movie",
     :cuisine_id => 2,
     :category_id => 7,
     :image_url => "http://www.cootey.com/weblog/pix/2006/einstein_tongue.jpg"
+  },
+  {
+    :name => "The Cat Snuggler",
+    :description => "It's okay.  Nobody is judging.",
+    :cuisine_id => 11,
+    :category_id => 10,
+    :image_url => "http://rlv.zcache.com/snuggle_kitties_postcard-p239190935713786625z8iat_400.jpg"
   }])
 
 
