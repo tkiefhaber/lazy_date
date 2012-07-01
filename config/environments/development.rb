@@ -39,5 +39,4 @@ LazyDate::Application.configure do
   config.assets.compile = false
   config.assets.digest = true
   config.assets.manifest = Rails.root.join("public/assets")
-  config.assets.precompile += ['rails.js']
 end

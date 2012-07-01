@@ -1,0 +1,4 @@
+<%= form_for(@vote, :remote => true) do |f| %>
+  <%= f.hidden_field "story_id", :value => @story.id %>
+  <%= image_submit_tag "assets/Film.gif" %>
+<% end %>
