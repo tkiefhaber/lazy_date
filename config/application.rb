@@ -59,6 +59,6 @@ module LazyDate
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
-    config.assets.precompile += ['jquery_style.css']
+   #config.assets.precompile += ['jquery_style.css']
   end
 end

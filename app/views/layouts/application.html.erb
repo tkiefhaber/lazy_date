@@ -2,9 +2,12 @@
 <html>
 <head>
   <title>Couch-Concierge</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "application", "jquery_style", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+  <%= javascript_include_tag 'http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.1.js' %>
 </head>
 <body>
 

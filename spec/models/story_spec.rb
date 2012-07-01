@@ -44,9 +44,9 @@ describe Story do
   end
 
   describe "getting a movie" do
-    let!(:story)     { FactoryGirl.create(:story) }
-    let!(:category)  { FactoryGirl.create(:category) }
-    let!(:movie)     { FactoryGirl.create(:movie) }
+    let!(:story)     { FactoryGirl.build(:story) }
+    let!(:category)  { FactoryGirl.build(:category) }
+    let!(:movie)     { FactoryGirl.build(:movie) }
 
     it "provides a movie from the specified category" do
       story.category = category
@@ -56,11 +56,11 @@ describe Story do
   end
 
   describe "getting a restaurant" do
-    let!(:story)      { FactoryGirl.create(:story) }
-    let!(:cuisine)    { FactoryGirl.create(:cuisine) }
-    let!(:restaurant) { FactoryGirl.create(:restaurant) }
+    let!(:story)      { FactoryGirl.build(:story) }
+    let!(:cuisine)    { FactoryGirl.build(:cuisine) }
+    let!(:restaurant) { FactoryGirl.build(:restaurant) }
 
-    it "provides a movie from the specified category" do
+    it "provides a restaurant from the specified cuisine" do
       story.cuisine = cuisine
       cuisine.restaurants << restaurant
       story.get_restaurant.should == restaurant

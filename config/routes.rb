@@ -6,5 +6,6 @@ LazyDate::Application.routes.draw do
  root :to => "home#index"
 
  resources :stories
+ resources :votes
 
 end

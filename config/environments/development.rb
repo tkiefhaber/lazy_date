@@ -36,7 +36,7 @@ LazyDate::Application.configure do
   config.assets.debug = true
 
   # Hopefully make dev act more like prod
-  config.assets.compile = false
-  config.assets.digest = true
-  config.assets.manifest = Rails.root.join("public/assets")
+  # config.assets.compile = false
+  # config.assets.digest = true
+  # config.assets.manifest = Rails.root.join("public/assets")
 end

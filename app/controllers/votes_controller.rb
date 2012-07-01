@@ -1,6 +1,6 @@
 
 class VotesController < ApplicationController
- 
+
   # GET /votes/new
   # GET /votes/new.xml
   def new
@@ -14,10 +14,15 @@ class VotesController < ApplicationController
 
   def create
     @vote = Vote.new(params[:vote])
-    if @vote.save
-      redirect_to stories_path
+    @story = Story.find_by_id(params[:vote][:story_id])
+    if @vote.save!
+      #respond_with(@vote)
+      #redirect_to story_path(@story)
     else
-      render :new
+      #render :new
     end
+  end
+
+  def index
   end
 end
