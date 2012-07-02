@@ -20,12 +20,19 @@ require 'mechanize'
             name = info.css(".title").text.split(":")[0]
             description = info.css("p.desc").text
             image_url = info.at(".preview")["src"]
-            link = info.at(".footer a")["href"]
+            original_link = info.at(".footer a")["href"]
+            puts original_link
+            LOCATION_REGEX = /(\d+)/
+            LOCATION_REGEX =~ original_link
+            location_id = $1
+            puts location_id
+            link = "http://touch.livingsocial.com/m/instant/menus/locations/#{location_id}"
+            puts link
             restaurant_cuisine = category.to_s.gsub(/[^a-zA-Z ]/, '').strip
 
             db_takeout_restaurant = Restaurant.find_or_initialize_by_name(name)
             db_takeout_restaurant.description = description
-            db_takeout_restaurant.link = "https://livingsocial.com" + link
+            db_takeout_restaurant.link = link
             db_takeout_restaurant.image_url = image_url
             db_takeout_restaurant.save
 
