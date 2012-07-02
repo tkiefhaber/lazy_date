@@ -184,6 +184,12 @@ Movie.create([
     :description => "After ambushing and killing his rival -- losing everything in the process -- dispirited warlord Hou Jie turns to a Shaolin monastery seeking salvation. But his newfound redemption is soon put to the test in this kinetic kung fu saga.",
     :link => "http://movies.netflix.com/WiMovie/Shaolin/70199741?trkid=4694566",
     :image_url => "http://cdn-1.nflximg.com/images/3784/1093784.jpg"
+  },
+  {
+    :title => "Roxanne",
+    :description => "Fearless small-town firefighter C.D. Bales (Steve Martin) is seriously smitten with beautiful stargazer Roxanne Kowalski (Daryl Hannah) but is self-conscious about his exceedingly long nose in this contemporary take on "Cyrano de Bergerac." So he takes advantage of the fact that the fair maiden has also captured the fancy of C.D.'s handsome but tongue-tied chum Chris (Rick Rossovich) and woos her vicariously through his handsome rival.",
+    :link => "http://movies.netflix.com/WiMovie/Roxanne/921910?trkid=2361637",
+    :image_url => "http://cdn-0.nflximg.com/images/9949/1059949.jpg"
   }
   ])
 
@@ -365,6 +371,10 @@ MovieCategory.create([
   {
     :movie_id => 25,
     :category_id => 4
+  },
+  {
+    :movie_id => 32,
+    :category_id => 10
   }])
 
 Story.create([
