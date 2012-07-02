@@ -8,7 +8,7 @@ class StoriesController < ApplicationController
   end
 
   def index
-    @stories = Story.all
+    @stories = Story.find(:all, :order => "votes_count DESC")
   end
 
   def new

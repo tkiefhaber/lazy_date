@@ -1,4 +1,4 @@
-<%= form_for(@vote, :remote => true, :html => { "data-ajax" => false }) do |f| %>
+<%= form_for(@vote, :remote => true, :html => { "data-ajax" => false, "data-theme" => "b" }) do |f| %>
   <%= f.hidden_field "story_id", :value => @story.id %>
-  <%= submit_tag "Sounds like a plan" %>
+  <%= submit_tag "Upvote this night." %>
 <% end %>
