@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :movie do
-    title "Good Fellas"
+  	sequence(:title) { |n| "Good Fellas#{n}" }
     description "Mobsters make good money"
     link "http://example.com"
     image_url "http://kalbiburger.com/wp-content/uploads/2010/06/Kalbi_Burger.jpg"

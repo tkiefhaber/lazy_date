@@ -2,6 +2,6 @@
 
 FactoryGirl.define do
   factory :cuisine do
-    name "Fro-Yo"
+    sequence(:name) { |n| "FroYo#{n}" }
   end
 end
