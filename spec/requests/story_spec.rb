@@ -75,7 +75,28 @@ describe "Stories" do
 	end
 
 	context "creating a new story" do
-		visit new_story_path
-		save_and_open_page
+		let!(:story) { FactoryGirl.create(:story) }
+		let!(:cuisine) { FactoryGirl.create(:cuisine) }
+		let!(:restaurant) { FactoryGirl.create(:restaurant) }
+		let!(:restaurant_cuisine) { FactoryGirl.create(:restaurant_cuisine) }
+		let!(:movie) { FactoryGirl.create(:movie) }
+		let!(:category) { FactoryGirl.create(:category) }
+		let!(:movie_category) { FactoryGirl.create(:movie_category) }
+		
+		it "displays a form to create a new story" do
+			visit new_story_path
+			page.should have_content("Name")
+		end
+
+		it "creates a new form" do
+			visit new_story_path
+			fill_in 'Name', with: "Funky Friday"
+			fill_in 'Description', with: "You won't regret it."
+			page.select("#{Category.last.name}", :from => "Category")
+			page.select("#{Cuisine.last.name}", :from => "Cuisine")
+			click_on "Create Story"
+			current_url.should == stories_url
+			page.should have_content("Funky Friday")
+		end
 	end
 end
