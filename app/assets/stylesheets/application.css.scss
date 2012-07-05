@@ -20,11 +20,12 @@ $magenta: #E64598;
 $green: #BAE37D;
 $orange: #FF590D;
 
-.ui-btn-text{
-}
-
 h1{
 	color:$darkblue;
+}
+
+body{
+  background-coler: $green !important; 
 }
 
 .ui-li-thumb{
@@ -55,9 +56,14 @@ h1{
 .ui-li-desc{
 	white-space: normal !important;
 	text-overflow: ellipsis !important;
+
 }
 
 .ui-bar-a{
 	color:$lightblue !important;
 }
+
+.ui-btn-inner .ui-li .ui-li-static .ui-body-c{
+  background: $orange !important;
+  }
 
