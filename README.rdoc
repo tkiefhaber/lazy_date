@@ -1,5 +1,9 @@
 Welcome to the app formerly known as lazy_date, Couch-Concierge.
 
+The one stop shop for people in the DC area to get suggestions on where to get takeout and what movie to watch on Netflix.
+
+It's pretty much the best thing in the world.
+
 Pretty straight forward to get it to run.
 
 You'll have to pull it down then
@@ -8,7 +12,7 @@ You'll have to pull it down then
 
 2. rake db:migrate
 
-3. rake get_takeout_menus
+3. rake get_takeout_menus (this will take about 15 minutes, so be patient)
 
 4. rake db:seed
 
